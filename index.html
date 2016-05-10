@@ -8,12 +8,18 @@
   </head>
   <body>
     <a-scene>
-      <a-sphere position="0 1.8 0" radius="1.5" color="#EF2D5E"></a-sphere>
-   
-     
-   
+
+
+      <a-entity
+                geometry="primitive: sphere; radius: 1" 
+                material="color: red; metalness: 0.3"
+                position="0 1.8 0">
+      </a-entity>
 
       <a-sky color="black"></a-sky>
+      <a-entity position="0 1.8 5">
+        <a-camera></a-camera>
+      </a-entity>
     </a-scene>
   </body>
 </html>
