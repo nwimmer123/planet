@@ -4,7 +4,9 @@ var PI_2 = Math.PI / 2;
 AFRAME.registerComponent('orbit-controls', {
 
   schema: {
-    enabled: { default: true }
+    enabled: { default: true },
+    xMultiplier: { default: 0.002},
+    yMuliplier: {default: 0.002}
   },
 
   init: function () {
@@ -203,6 +205,7 @@ AFRAME.registerComponent('orbit-controls', {
   },
 
   onMouseMove: function (event) {
+    var data = this.data;
     var pitchObject = this.pitchObject;
     var yawObject = this.yawObject;
     var previousMouseEvent = this.previousMouseEvent;
@@ -218,8 +221,8 @@ AFRAME.registerComponent('orbit-controls', {
     }
     this.previousMouseEvent = event;
 
-    yawObject.rotation.y -= movementX * 0.002;
-    pitchObject.rotation.x -= movementY * 0.002;
+    yawObject.rotation.y -= movementX * data.yMuliplier;
+    pitchObject.rotation.x -= movementY * data.xMultiplier;
     pitchObject.rotation.x = Math.max(-PI_2, Math.min(PI_2, pitchObject.rotation.x));
   },
 
