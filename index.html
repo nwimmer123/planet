@@ -5,15 +5,15 @@
     <title>simple boilerplate</title>
     <meta name="description" content="Hello, World! • A-Frame">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://raw.githubusercontent.com/subsumo/aframe-orbit-controls/master/dist/aframe-orbit-controls-component.min.js"></script>
     <script src="index.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <button id="clicker">Click ME </button>
     <a-scene>
-
-<!--       <a-camera target="#target" distance="1" orbit-controls look-controls-enabled=false wasd-controls-enabled=true position="0 0 0" ></a-camera>
-      <a-sphere id="target" position="0 0 1" radius="0.1" color="#EF2D5E"></a-sphere> -->
-<!--       <a-sky src="https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg"></a-sky> -->
 
 
       <a-entity id="target"
@@ -28,9 +28,12 @@
       </a-entity>
       <a-sky color="black"></a-sky>
 
-      <a-entity position="0 1.8 2">
+      <a-entity position="0 0 0">
         <a-camera target="#target" distance="6" orbit-controls look-controls-enabled=false wasd-controls-enabled=true  ></a-camera>
       </a-entity>
+
+      <a-light color="yellow" position="-1 1 0"></a-light>
+      <a-light color="yellow" position="20 1 0"></a-light>
 
     </a-scene>
   </body>

@@ -1,0 +1,6 @@
+button {
+  z-index: 5000;
+  color: rgb(12, 11, 11);
+  background-color: white;
+  position: absolute;
+}
