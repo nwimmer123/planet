@@ -17,5 +17,8 @@
     "aframe-example",
     "aframe-scene",
     "aframe-boilerplate"
-  ]
+  ],
+  "dependencies": {
+    "aframe-orbit-controls-component": "^1.0.0"
+  }
 }
